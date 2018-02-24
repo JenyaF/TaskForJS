@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove cubes</title>
+
+     
+    <link rel='stylesheet' href='css/style.css'>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script defer src="script.js"></script>
+
+</head>
+    <body>
+        <div class="row">
+            <div class=" main col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-7 col-sm-offset-1">
+                <h1>Remove cubes</h1>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-lg-6 ">
+                        <button type="button" id="start" class="btn btn-success text-uppercase ">start</button>
+                        <button type="button" id="newGame" class="btn btn-success text-uppercase ">new game</button>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-lg-2 col-lg-offset-1">
+                        <label for="points">Points</label>
+                        <div id="points">
+                            0
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-lg-2 col-lg-offset-1">
+                        <label for="time">Time left</label>
+                        <div id="time">
+                            00:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="additional col-md-4 col-sm-4 col-lg-4">
+                    <br/>
+                    Hello! This is the game <strong>"Remove the cubes"!</strong>
+                    <h3><a href="rules.html"> Rules</a></h3>                    
+                    Remove as many cubes as possible to collect as many points as possible.<br/>
+                    But be careful! Points depend on the color.               
+                    <hr/>                              
+                </div>
+        </div>
+        <div class="row">
+            <div class="body-game col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1 col-lg-7 col-lg-offset-1">
+            </div>
+            <div class="additional table-responsive col-md-2 col-sm-2 col-lg-2">
+                 <table class="table table-bordered  table-striped">
+                     <thead>
+                        <tr>
+                            <th >color</th>
+                            <th>points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="green">green</td>
+                            <td>+2 </td>
+                        </tr>
+                         <tr>
+                            <td id="red">red</td>
+                            <td>+10</td>
+                        </tr>
+                         <tr>
+                            <td id="black">black</td>
+                            <td>-10</td>
+                        </tr>
+                         <tr>
+                            <td id="blue">blue</td>
+                            <td>+1</td>
+                        </tr>
+                    </tbody> 
+                </table> 
+               Result
+                <table id="tableOfResults" class="table table-bordered  table-striped">
+                    <thead>
+                    <tr>
+                        <th>name</th>
+                        <th width="50px">score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+    <div id="myModal" class="modal fade" tabindex="-1" >
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <p>Your score: 180 </p>
+                    <form class="form-horizontal">
+                        <div class="form-group ">
+                            <label for="name" class=" col-sm-2  col-lg-2 col-md-2 control-label">Name  </label>
+                            <div class="col-sm-9 col-md-9 col-lg-9">
+                                <input type="text" id="name" name="name" class="form-control" required >
+                            </div>
+                            <div class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+                                <button type="button"  id="save" class="btn btn-success text-uppercase">save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
